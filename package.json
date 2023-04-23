@@ -11,6 +11,11 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.6.6",
     "@types/node": "^18",
-    "nuxt": "^3.4.1"
+    "nuxt": "^3.4.1",
+    "nuxt-api-party": "^0.10.1"
+  },
+  "dependencies": {
+    "@nuxtjs/proxy": "^2.1.0",
+    "mitt": "^3.0.0"
   }
 }

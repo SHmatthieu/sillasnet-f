@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
     head: {
@@ -7,9 +6,23 @@ export default defineNuxtConfig({
         },      
     },
     modules: [
-    '@nuxtjs/tailwindcss'
+      '@nuxtjs/tailwindcss',
+      'nuxt-api-party'
   ],
   css: [
     '~/assets/global.css'
-  ]
+  ],
+    plugins: [
+    { src: '~/plugins/mitt.client.ts', mode: 'client' }
+  ],
+    apiParty: {
+    endpoints: {
+      jsonPlaceholder: {
+        url: process.env.JSON_PLACEHOLDER_API_BASE_URL!,
+        headers: {
+          Authorization: `Bearer ${process.env.JSON_PLACEHOLDER_API_TOKEN}`
+        }
+      }
+    }
+  }
 })
