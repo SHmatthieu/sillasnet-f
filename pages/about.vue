@@ -6,14 +6,16 @@
 		<div class="md:mx-auto md:max-w-md">
 			<h1 class="text-left text-2xl font-bold">About</h1>
 			<p class="text-center md:text-left md:w-full">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Delectus esse numquam possimus corporis vero quod ea hic
-				distinctio iusto, tempore aperiam earum culpa assumenda odio
-				voluptas dolorum. Ex, libero beatae. Lorem ipsum dolor sit, amet
-				consectetur adipisicing elit. Iure, magni necessitatibus?
-				Reiciendis qui, dolores praesentium sequi corrupti repellendus
-				similique possimus soluta eum, consequuntur inventore earum
-				ducimus suscipit alias aut fugit.
+				Cybersecurity is a top concern for businesses of all sizes.
+				However, small and medium-sized businesses often have limited
+				resources to allocate to cybersecurity, which makes them
+				particularly vulnerable to attacks. This is why the project
+				presented aims to provide a platform that will allow these
+				companies to easily access information and solutions to improve
+				their cybersecurity. The proposed scoring approach is a
+				practical tool that will allow users to understand the threat
+				and make informed decisions to protect their data and
+				infrastructure.
 			</p>
 			<h1 class="text-left text-2xl font-bold" style="margin-top: 20px">
 				Technologies
