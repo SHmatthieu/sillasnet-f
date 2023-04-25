@@ -24,12 +24,13 @@
 		data() {
 			return {
 				tips: [
-					"ahaahahdqsddqsqsdqdshaha",
-					"bbbbbbbqdqdsqdsqdsqsdqsdbababa",
-					"chhchqdqdssqdqdsqdsqdsqdschchc",
+					"Try to reduce your threat score to zero ! contact us if you need help.",
 				],
 				index: 0,
 			};
+		},
+		mounted() {
+			this.loadTips();
 		},
 		methods: {
 			next() {
@@ -39,6 +40,17 @@
 			previous() {
 				this.index--;
 				if (this.index < 0) this.index = this.tips.length - 1;
+			},
+			async loadTips() {
+				const response = await $jsonPlaceholder(
+					useAppConfig().serverAddress + "/api/tips",
+					{
+						method: "GET",
+					}
+				);
+				response.Tips.forEach((tip: string) => {
+					this.tips.push(tip);
+				});
 			},
 		},
 	};

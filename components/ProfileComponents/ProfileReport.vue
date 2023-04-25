@@ -40,9 +40,24 @@
 			};
 		},
 		methods: {
-			submitReport() {
+			async submitReport() {
+				const tokenCookie = useCookie("token");
+				const nameCookie = useCookie("name");
+
+				const response = await $jsonPlaceholder(
+					useAppConfig().serverAddress + "/api/report",
+					{
+						method: "POST",
+						headers: {
+							name: nameCookie.value ?? "",
+							token: tokenCookie.value ?? "",
+						},
+						body: { Text: this.report },
+					}
+				);
 				this.report = "";
 				this.reportMsg = "thank you for your report !";
+
 				setTimeout(() => {
 					this.reportMsg = "";
 				}, 3000);
