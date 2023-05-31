@@ -1,5 +1,5 @@
 # Sillas net front end
-
+web interface of the sillasnet project
 ## Setup
 
 Make sure to install the dependencies:
